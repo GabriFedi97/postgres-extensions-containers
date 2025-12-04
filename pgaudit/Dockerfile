@@ -10,6 +10,7 @@ RUN set -eux; \
     apt-get update; \
 	apt-get install -y --no-install-recommends "postgresql-${PG_MAJOR}-pgaudit=${EXT_VERSION}"
 
+
 FROM scratch
 ARG PG_MAJOR
 
