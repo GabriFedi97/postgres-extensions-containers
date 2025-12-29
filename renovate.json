@@ -20,6 +20,15 @@
       ],
       "registryUrlTemplate": "https://download.postgresql.org/pub/repos/apt?suite={{#if suite}}{{suite}}{{else}}stable{{/if}}&components=main&binaryArch=amd64",
       "datasourceTemplate": "deb"
+    },
+    {
+      "customType": "regex",
+      "managerFilePatterns": [
+        "dagger/**/*.go"
+      ],
+      "matchStrings": [
+        "\\/\\/ renovate: datasource=(?<datasource>[a-z-.]+?) depName=(?<depName>[^\\s]+?)(?: (?:packageName)=(?<packageName>[^\\s]+?))?(?: versioning=(?<versioning>[^\\s]+?))\\s+\\/\\/\\s+\\+default=[\\\"']?.+:(?<currentValue>.+?)[\\\"']?\\s"
+      ]
     }
   ],
   "packageRules": [
