@@ -28,7 +28,6 @@ jobs:
         with:
           path: artifacts
           repository: cloudnative-pg/artifacts
-          token: ${{ secrets.REPO_GHA_PAT }}
           ref: main
 
       - name: Update catalogs
