@@ -41,7 +41,7 @@ jobs:
           version: ${{ env.DAGGER_VERSION }}
           verb: call
           module: ./dagger/maintenance/
-          args: generate-catalogs --catalogs-dir artifacts/image-catalogs/ export --path artifacts/image-catalogs/
+          args: generate-catalogs --catalogs-dir artifacts/image-catalogs/ export --path artifacts/image-catalogs/extensions/
 
       - name: Diff
         working-directory: artifacts
